@@ -45,6 +45,8 @@ def get_video():
         try:
             name = x['caption'].replace("\n","")
             logger.info(name)
+            logger.info('https://www.kuaishou.com/photo/{}/{}'.format(x['user_id'], x['photo_id']))
+            logger.info(json.dumps(x))
         except KeyError:
             pass
 
